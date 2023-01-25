@@ -8,13 +8,75 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "suppressImplicitAnyIndexErrors": true,
+    "suppressExcessPropertyErrors": true,
+    "strict": false,
+    "alwaysStrict": false,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "useUnknownInCatchVariables": false,
+    "target": "es2017",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+        "@noah-ark/common": [
+          "libs/noah-ark/common/src/index.ts"
+        ],
+        "@noah-ark/event-bus": [
+          "libs/noah-ark/event-bus/src/index.ts"
+        ],
+        "@noah-ark/expression-engine": [
+          "libs/noah-ark/expression-engine/src/index.ts"
+        ],
+        "@noah-ark/json-patch": [
+          "libs/noah-ark/json-patch/src/index.ts"
+        ],
+        "@noah-ark/path-matcher": [
+          "libs/noah-ark/path-matcher/src/index.ts"
+        ],
+        "@ss/api": [
+          "libs/ss/ss-api/src/index.ts"
+        ],
+        "@ss/auth": [
+          "libs/ss/ss-auth/src/index.ts"
+        ],
+        "@ss/common": [
+          "libs/ss/ss-common/src/index.ts"
+        ],
+        "@ss/data": [
+          "libs/ss/ss-data/src/index.ts"
+        ],
+        "@ss/job": [
+          "libs/ss/ss-job/src/index.ts"
+        ],
+        "@ss/notifications": [
+          "libs/ss/ss-notifications/src/index.ts"
+        ],
+        "@ss/payment": [
+          "libs/ss/ss-payment/src/index.ts"
+        ],
+        "@ss/rules": [
+          "libs/ss/ss-rules/src/index.ts"
+        ],
+        "@ss/storage": [
+          "libs/ss/ss-storage/src/index.ts"
+        ]
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules", "tmp"]
 }
