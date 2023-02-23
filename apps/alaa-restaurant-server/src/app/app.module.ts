@@ -17,7 +17,7 @@ import { ApiModule } from '@ss/api';
 const conf = new SSConfig('bus');
 // conf.broker = { transport: Transport.REDIS, options: { host: `${process.env.REDIS_HOST ?? 'localhost'}`, port: tryParseInt(process.env.REDIS_PORT, 6379) } };
 const dbConnectionOptions = new DbConnectionOptions()
-dbConnectionOptions.prefix = 'ss_'
+dbConnectionOptions.prefix = 'res_'
 const collections: DatabasesCollections = {
 
     'DB_DEFAULT': {
