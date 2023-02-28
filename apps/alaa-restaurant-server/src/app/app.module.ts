@@ -8,7 +8,7 @@ import { DatabasesCollections, DataModule, DbConnectionOptions } from '@ss/data'
 import { Schema } from 'mongoose'
 import { StorageModule } from "@ss/storage"
 import { AuthModule } from '@ss/auth';
-import { RulesModule } from "@ss/rules"
+import { GrantRule, RulesModule } from "@ss/rules"
 import { ScheduleModule } from '@nestjs/schedule';
 import { ApiModule } from '@ss/api';
 
@@ -33,11 +33,11 @@ const collections: DatabasesCollections = {
     imports: [
         CommonModule.register(conf,),
         DataModule.register(collections),
+        RulesModule.register(GrantRule,[{ name:'api',path:'/api',fallbackAuthorization:'grant'}]),
         AuthModule.register({ secret: "iskambilsecretlolhhh" }),
         ScheduleModule.forRoot(),
         StorageModule,
         ApiModule,
-        RulesModule,
     ],
     controllers: [AppController],
     providers: [AppService],
