@@ -24,6 +24,7 @@ const collections: DatabasesCollections = {
         collections: {
             'settings': { schema: new Schema({ _id: String }, { strict: false }) },
             'camp': { schema: new Schema({ _id: String }, { strict: false }) },
+            'department': { schema: new Schema({ _id: String }, { strict: false }) },
             'contentitems': { schema: new Schema({ _id: String }, { strict: false }) },
         },
         dbConnectionOptions
