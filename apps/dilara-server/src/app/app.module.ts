@@ -23,6 +23,11 @@ const collections: DatabasesCollections = {
     'DB_DEFAULT': {
         collections: {
             'settings': { schema: new Schema({ _id: String }, { strict: false }) },
+            'appointment': { schema: new Schema({ _id: String }, { strict: false }) },
+            'patient': { schema: new Schema({ _id: String }, { strict: false }) },
+            'payment': { schema: new Schema({ _id: String }, { strict: false }) },
+            'permissionrecord': { schema: new Schema({ _id: String }, { strict: false }) },
+            'complaint': { schema: new Schema({ _id: String }, { strict: false }) },
         },
         dbConnectionOptions
 
